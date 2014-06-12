@@ -219,6 +219,9 @@ set expandtab
 " 缩进时，取整 use multiple of shiftwidth when indenting with '<' and '>'
 set shiftround
 
+" List format
+set listchars=tab:\|.,trail:-
+
 " A buffer becomes hidden when it is abandoned
 set hidden
 set wildmode=list:longest
