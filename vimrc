@@ -459,8 +459,8 @@ autocmd BufNewFile,BufRead *.py inoremap # X<c-h>#
 nnoremap [b :bprevious<cr>
 nnoremap ]b :bnext<cr>
 " 使用方向键切换buffer
-noremap <left> :bp<CR>
-noremap <right> :bn<CR>
+noremap <left> :tabp<CR>
+noremap <right> :tabn<CR>
 
 
 " tab 操作
@@ -536,7 +536,7 @@ nnoremap <leader>v V`}
 cmap w!! w !sudo tee >/dev/null %
 
 " kj 替换 Esc
-inoremap kj <Esc>
+" inoremap kj <Esc>
 
 " 滚动Speed up scrolling of the viewport slightly
 nnoremap <C-e> 2<C-e>
@@ -575,7 +575,7 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " 具体编辑文件类型的一般设置，比如不要 tab 等
 autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown.mkd
-autocmd BufRead,BufNewFile *.part,*.html set filetype=html
+autocmd BufRead,BufNewFile *.html set filetype=jinja
 autocmd BufRead,BufNewFile *.css, *.less set filetype=hstyle
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
 autocmd FileType python setl tabstop=4 shiftwidth=4 expandtab ai
@@ -658,7 +658,7 @@ endif
 
 
 " theme主题
-set background=dark
+set background=dark 
 set t_Co=256
 
 colorscheme solarized

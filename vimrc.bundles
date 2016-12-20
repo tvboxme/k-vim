@@ -224,6 +224,9 @@ if count(g:bundle_groups, 'javascript')
     Plug 'othree/javascript-libraries-syntax.vim'
     let g:used_javascript_libs = 'jquery,underscore,backbone'
 
+    Plug 'mxw/vim-jsx'
+    let g:jsx_ext_required = 0
+
     " for javascript 自动补全, 配合YCM, 需要安装全局环境的（非nvm中) node.js&npm
     " 安装完成后还需要在 bundle/tern_for_vim 下执行 npm install 安装依赖 `cd ~/.vim/bundle/tern_for_vim && npm install`
     " see https://github.com/marijnh/tern_for_vim
@@ -593,6 +596,10 @@ endif
         \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
         \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
         \ }
+    let g:ctrlp_prompt_mappings = {
+        \ 'AcceptSelection("e")': ['<c-t>'],
+        \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+        \ }
     let g:ctrlp_working_path_mode=0
     let g:ctrlp_match_window_bottom=1
     let g:ctrlp_max_height=15
@@ -600,12 +607,12 @@ endif
     let g:ctrlp_mruf_max=500
     let g:ctrlp_follow_symlinks=1
     " 如果安装了ag, 使用ag
-    " if executable('ag')
-    " " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-    " " ag is fast enough that CtrlP doesn't need to cache
-    " let g:ctrlp_use_caching = 0
-    " endif
+    if executable('ag')
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
+    endif
 
     " ctrlpfunky
     " ctrlp插件1 - 不用ctag进行函数快速跳转
