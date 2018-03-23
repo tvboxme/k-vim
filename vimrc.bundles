@@ -98,6 +98,7 @@ Plug 'terryma/vim-multiple-cursors'
 " change to https://github.com/ctrlpvim/ctrlp.vim
 " ctrlp ctrlpfunky
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 " ctrlsf
 " 类似sublimetext的搜索
 " In CtrlSF window:
