@@ -579,7 +579,7 @@ autocmd BufRead,BufNewFile *.html set filetype=jinja
 autocmd BufRead,BufNewFile *.css, *.less set filetype=hstyle
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
 autocmd FileType python setl tabstop=4 shiftwidth=4 expandtab ai
-autocmd FileType ruby,html,javascript,hstyle setl tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
+autocmd FileType ruby,html,json,javascript,hstyle setl tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
 
 " disable showmatch when use > in php
 au BufWinEnter *.php set mps-=<:>
@@ -658,12 +658,12 @@ endif
 
 
 " theme主题
-set background=dark 
+set background=dark
 set t_Co=256
 
-" colorscheme solarized
-colorscheme molokai
-" colorscheme desert
+colorscheme solarized
+" colorscheme molokai
+" colorscheme gruvbox
 
 
 " 设置标记一列的背景颜色和数字一行颜色一致
